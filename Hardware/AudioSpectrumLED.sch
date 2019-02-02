@@ -1,0 +1,704 @@
+EESchema Schematic File Version 4
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "LED Audio Spectrum Analyser"
+Date "2019-02-01"
+Rev "1"
+Comp "Marcel Radzio"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Device:R R1
+U 1 1 5C54468A
+P 2550 1350
+F 0 "R1" H 2620 1396 50  0000 L CNN
+F 1 "4,7 k" H 2620 1305 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 2480 1350 50  0001 C CNN
+F 3 "~" H 2550 1350 50  0001 C CNN
+	1    2550 1350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2550 1500 2550 1850
+Wire Wire Line
+	2550 1850 2150 1850
+$Comp
+L Device:R R2
+U 1 1 5C544744
+P 2550 2050
+F 0 "R2" H 2620 2096 50  0000 L CNN
+F 1 "1,8 k" H 2620 2005 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 2480 2050 50  0001 C CNN
+F 3 "~" H 2550 2050 50  0001 C CNN
+	1    2550 2050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2550 1850 2550 1900
+Connection ~ 2550 1850
+Wire Wire Line
+	2550 2200 2550 2750
+$Comp
+L Connector:AudioJack3 J2
+U 1 1 5C5449C7
+P 2500 3850
+F 0 "J2" H 2220 3783 50  0000 R CNN
+F 1 "AudioJack3" H 2220 3874 50  0000 R CNN
+F 2 "Connector_Audio:Jack_3.5mm_CUI_SJ1-3533NG_Horizontal" H 2500 3850 50  0001 C CNN
+F 3 "~" H 2500 3850 50  0001 C CNN
+	1    2500 3850
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	2150 2750 2550 2750
+Connection ~ 2550 2750
+Wire Wire Line
+	2700 3850 2800 3850
+Wire Wire Line
+	2700 4050 2700 3950
+Wire Wire Line
+	2550 950  1750 950 
+Wire Wire Line
+	1750 950  1750 1050
+Wire Wire Line
+	2550 950  2550 1200
+NoConn ~ 1650 3050
+NoConn ~ 1150 2750
+NoConn ~ 1150 2650
+NoConn ~ 1150 1550
+NoConn ~ 1150 1450
+NoConn ~ 1850 1050
+NoConn ~ 2150 1450
+NoConn ~ 2150 1550
+NoConn ~ 2150 2050
+NoConn ~ 2150 2150
+NoConn ~ 2150 2250
+NoConn ~ 2150 2350
+NoConn ~ 2150 2450
+NoConn ~ 2150 2550
+NoConn ~ 2150 2650
+$Comp
+L power:GND #PWR05
+U 1 1 5C54BBBF
+P 2400 4050
+F 0 "#PWR05" H 2400 3800 50  0001 C CNN
+F 1 "GND" H 2405 3877 50  0000 C CNN
+F 2 "" H 2400 4050 50  0001 C CNN
+F 3 "" H 2400 4050 50  0001 C CNN
+	1    2400 4050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2400 4050 2700 4050
+$Comp
+L power:GND #PWR04
+U 1 1 5C54CCEB
+P 1750 3050
+F 0 "#PWR04" H 1750 2800 50  0001 C CNN
+F 1 "GND" H 1755 2877 50  0000 C CNN
+F 2 "" H 1750 3050 50  0001 C CNN
+F 3 "" H 1750 3050 50  0001 C CNN
+	1    1750 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR03
+U 1 1 5C54CE50
+P 1550 1050
+F 0 "#PWR03" H 1550 900 50  0001 C CNN
+F 1 "VCC" H 1567 1223 50  0000 C CNN
+F 2 "" H 1550 1050 50  0001 C CNN
+F 3 "" H 1550 1050 50  0001 C CNN
+	1    1550 1050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 5C54D78C
+P 2800 3000
+F 0 "R3" H 2870 3046 50  0000 L CNN
+F 1 "1,8 k" H 2870 2955 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 2730 3000 50  0001 C CNN
+F 3 "~" H 2800 3000 50  0001 C CNN
+	1    2800 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2800 2750 2550 2750
+Wire Wire Line
+	2800 2750 2800 2850
+$Comp
+L LED_Strip:Led_Strip_Connector L1
+U 1 1 5C5552C2
+P 4350 1200
+F 0 "L1" H 4364 655 50  0000 C CNN
+F 1 "Led_Strip_Connector" H 4364 746 50  0000 C CNN
+F 2 "Connector_JST:JST_EH_B03B-EH-A_1x03_P2.50mm_Vertical" H 4350 1200 50  0001 C CNN
+F 3 "" H 4350 1200 50  0001 C CNN
+	1    4350 1200
+	-1   0    0    1   
+$EndComp
+Wire Notes Line
+	3100 450  3100 4550
+Text Notes 1050 650  0    50   ~ 0
+MCU with Audio Signal Processing
+Wire Wire Line
+	4500 850  4850 850 
+Wire Wire Line
+	4500 1050 4850 1050
+$Comp
+L power:VCC #PWR06
+U 1 1 5C5589CF
+P 4850 850
+F 0 "#PWR06" H 4850 700 50  0001 C CNN
+F 1 "VCC" H 4867 1023 50  0000 C CNN
+F 2 "" H 4850 850 50  0001 C CNN
+F 3 "" H 4850 850 50  0001 C CNN
+	1    4850 850 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR07
+U 1 1 5C558A2C
+P 4850 1050
+F 0 "#PWR07" H 4850 800 50  0001 C CNN
+F 1 "GND" H 4855 877 50  0000 C CNN
+F 2 "" H 4850 1050 50  0001 C CNN
+F 3 "" H 4850 1050 50  0001 C CNN
+	1    4850 1050
+	1    0    0    -1  
+$EndComp
+Text Label 4500 950  0    50   ~ 0
+LED_SIGNAL_1
+$Comp
+L LED_Strip:Led_Strip_Connector L2
+U 1 1 5C55A3E7
+P 4350 2000
+F 0 "L2" H 4364 1455 50  0000 C CNN
+F 1 "Led_Strip_Connector" H 4364 1546 50  0000 C CNN
+F 2 "Connector_JST:JST_EH_B03B-EH-A_1x03_P2.50mm_Vertical" H 4350 2000 50  0001 C CNN
+F 3 "" H 4350 2000 50  0001 C CNN
+	1    4350 2000
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4500 1650 4850 1650
+Wire Wire Line
+	4500 1850 4850 1850
+$Comp
+L power:VCC #PWR08
+U 1 1 5C55A3F0
+P 4850 1650
+F 0 "#PWR08" H 4850 1500 50  0001 C CNN
+F 1 "VCC" H 4867 1823 50  0000 C CNN
+F 2 "" H 4850 1650 50  0001 C CNN
+F 3 "" H 4850 1650 50  0001 C CNN
+	1    4850 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR09
+U 1 1 5C55A3F6
+P 4850 1850
+F 0 "#PWR09" H 4850 1600 50  0001 C CNN
+F 1 "GND" H 4855 1677 50  0000 C CNN
+F 2 "" H 4850 1850 50  0001 C CNN
+F 3 "" H 4850 1850 50  0001 C CNN
+	1    4850 1850
+	1    0    0    -1  
+$EndComp
+Text Label 4500 1750 0    50   ~ 0
+LED_SIGNAL_2
+$Comp
+L LED_Strip:Led_Strip_Connector L3
+U 1 1 5C55A6FA
+P 4350 2800
+F 0 "L3" H 4364 2255 50  0000 C CNN
+F 1 "Led_Strip_Connector" H 4364 2346 50  0000 C CNN
+F 2 "Connector_JST:JST_EH_B03B-EH-A_1x03_P2.50mm_Vertical" H 4350 2800 50  0001 C CNN
+F 3 "" H 4350 2800 50  0001 C CNN
+	1    4350 2800
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4500 2450 4850 2450
+Wire Wire Line
+	4500 2650 4850 2650
+$Comp
+L power:VCC #PWR010
+U 1 1 5C55A704
+P 4850 2450
+F 0 "#PWR010" H 4850 2300 50  0001 C CNN
+F 1 "VCC" H 4867 2623 50  0000 C CNN
+F 2 "" H 4850 2450 50  0001 C CNN
+F 3 "" H 4850 2450 50  0001 C CNN
+	1    4850 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR011
+U 1 1 5C55A70A
+P 4850 2650
+F 0 "#PWR011" H 4850 2400 50  0001 C CNN
+F 1 "GND" H 4855 2477 50  0000 C CNN
+F 2 "" H 4850 2650 50  0001 C CNN
+F 3 "" H 4850 2650 50  0001 C CNN
+	1    4850 2650
+	1    0    0    -1  
+$EndComp
+Text Label 4500 2550 0    50   ~ 0
+LED_SIGNAL_3
+$Comp
+L LED_Strip:Led_Strip_Connector L6
+U 1 1 5C55AA9D
+P 5700 1200
+F 0 "L6" H 5714 655 50  0000 C CNN
+F 1 "Led_Strip_Connector" H 5714 746 50  0000 C CNN
+F 2 "Connector_JST:JST_EH_B03B-EH-A_1x03_P2.50mm_Vertical" H 5700 1200 50  0001 C CNN
+F 3 "" H 5700 1200 50  0001 C CNN
+	1    5700 1200
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5850 850  6200 850 
+Wire Wire Line
+	5850 1050 6200 1050
+$Comp
+L power:VCC #PWR016
+U 1 1 5C55AAA7
+P 6200 850
+F 0 "#PWR016" H 6200 700 50  0001 C CNN
+F 1 "VCC" H 6217 1023 50  0000 C CNN
+F 2 "" H 6200 850 50  0001 C CNN
+F 3 "" H 6200 850 50  0001 C CNN
+	1    6200 850 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR017
+U 1 1 5C55AAAD
+P 6200 1050
+F 0 "#PWR017" H 6200 800 50  0001 C CNN
+F 1 "GND" H 6205 877 50  0000 C CNN
+F 2 "" H 6200 1050 50  0001 C CNN
+F 3 "" H 6200 1050 50  0001 C CNN
+	1    6200 1050
+	1    0    0    -1  
+$EndComp
+Text Label 5850 950  0    50   ~ 0
+LED_SIGNAL_6
+$Comp
+L LED_Strip:Led_Strip_Connector L7
+U 1 1 5C55AEE3
+P 5700 2000
+F 0 "L7" H 5714 1455 50  0000 C CNN
+F 1 "Led_Strip_Connector" H 5714 1546 50  0000 C CNN
+F 2 "Connector_JST:JST_EH_B03B-EH-A_1x03_P2.50mm_Vertical" H 5700 2000 50  0001 C CNN
+F 3 "" H 5700 2000 50  0001 C CNN
+	1    5700 2000
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5850 1650 6200 1650
+Wire Wire Line
+	5850 1850 6200 1850
+$Comp
+L power:VCC #PWR018
+U 1 1 5C55AEED
+P 6200 1650
+F 0 "#PWR018" H 6200 1500 50  0001 C CNN
+F 1 "VCC" H 6217 1823 50  0000 C CNN
+F 2 "" H 6200 1650 50  0001 C CNN
+F 3 "" H 6200 1650 50  0001 C CNN
+	1    6200 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR019
+U 1 1 5C55AEF3
+P 6200 1850
+F 0 "#PWR019" H 6200 1600 50  0001 C CNN
+F 1 "GND" H 6205 1677 50  0000 C CNN
+F 2 "" H 6200 1850 50  0001 C CNN
+F 3 "" H 6200 1850 50  0001 C CNN
+	1    6200 1850
+	1    0    0    -1  
+$EndComp
+Text Label 5850 1750 0    50   ~ 0
+LED_SIGNAL_7
+$Comp
+L LED_Strip:Led_Strip_Connector L8
+U 1 1 5C55B3FD
+P 5700 2800
+F 0 "L8" H 5714 2255 50  0000 C CNN
+F 1 "Led_Strip_Connector" H 5714 2346 50  0000 C CNN
+F 2 "Connector_JST:JST_EH_B03B-EH-A_1x03_P2.50mm_Vertical" H 5700 2800 50  0001 C CNN
+F 3 "" H 5700 2800 50  0001 C CNN
+	1    5700 2800
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5850 2450 6200 2450
+Wire Wire Line
+	5850 2650 6200 2650
+$Comp
+L power:VCC #PWR020
+U 1 1 5C55B407
+P 6200 2450
+F 0 "#PWR020" H 6200 2300 50  0001 C CNN
+F 1 "VCC" H 6217 2623 50  0000 C CNN
+F 2 "" H 6200 2450 50  0001 C CNN
+F 3 "" H 6200 2450 50  0001 C CNN
+	1    6200 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR021
+U 1 1 5C55B40D
+P 6200 2650
+F 0 "#PWR021" H 6200 2400 50  0001 C CNN
+F 1 "GND" H 6205 2477 50  0000 C CNN
+F 2 "" H 6200 2650 50  0001 C CNN
+F 3 "" H 6200 2650 50  0001 C CNN
+	1    6200 2650
+	1    0    0    -1  
+$EndComp
+Text Label 5850 2550 0    50   ~ 0
+LED_SIGNAL_8
+$Comp
+L LED_Strip:Led_Strip_Connector L4
+U 1 1 5C55BB77
+P 4350 3600
+F 0 "L4" H 4364 3055 50  0000 C CNN
+F 1 "Led_Strip_Connector" H 4364 3146 50  0000 C CNN
+F 2 "Connector_JST:JST_EH_B03B-EH-A_1x03_P2.50mm_Vertical" H 4350 3600 50  0001 C CNN
+F 3 "" H 4350 3600 50  0001 C CNN
+	1    4350 3600
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4500 3250 4850 3250
+Wire Wire Line
+	4500 3450 4850 3450
+$Comp
+L power:VCC #PWR012
+U 1 1 5C55BB81
+P 4850 3250
+F 0 "#PWR012" H 4850 3100 50  0001 C CNN
+F 1 "VCC" H 4867 3423 50  0000 C CNN
+F 2 "" H 4850 3250 50  0001 C CNN
+F 3 "" H 4850 3250 50  0001 C CNN
+	1    4850 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR013
+U 1 1 5C55BB87
+P 4850 3450
+F 0 "#PWR013" H 4850 3200 50  0001 C CNN
+F 1 "GND" H 4855 3277 50  0000 C CNN
+F 2 "" H 4850 3450 50  0001 C CNN
+F 3 "" H 4850 3450 50  0001 C CNN
+	1    4850 3450
+	1    0    0    -1  
+$EndComp
+Text Label 4500 3350 0    50   ~ 0
+LED_SIGNAL_4
+$Comp
+L LED_Strip:Led_Strip_Connector L9
+U 1 1 5C55BB8E
+P 5700 3600
+F 0 "L9" H 5714 3055 50  0000 C CNN
+F 1 "Led_Strip_Connector" H 5714 3146 50  0000 C CNN
+F 2 "Connector_JST:JST_EH_B03B-EH-A_1x03_P2.50mm_Vertical" H 5700 3600 50  0001 C CNN
+F 3 "" H 5700 3600 50  0001 C CNN
+	1    5700 3600
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5850 3250 6200 3250
+Wire Wire Line
+	5850 3450 6200 3450
+$Comp
+L power:VCC #PWR022
+U 1 1 5C55BB98
+P 6200 3250
+F 0 "#PWR022" H 6200 3100 50  0001 C CNN
+F 1 "VCC" H 6217 3423 50  0000 C CNN
+F 2 "" H 6200 3250 50  0001 C CNN
+F 3 "" H 6200 3250 50  0001 C CNN
+	1    6200 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR023
+U 1 1 5C55BB9E
+P 6200 3450
+F 0 "#PWR023" H 6200 3200 50  0001 C CNN
+F 1 "GND" H 6205 3277 50  0000 C CNN
+F 2 "" H 6200 3450 50  0001 C CNN
+F 3 "" H 6200 3450 50  0001 C CNN
+	1    6200 3450
+	1    0    0    -1  
+$EndComp
+Text Label 5850 3350 0    50   ~ 0
+LED_SIGNAL_9
+$Comp
+L LED_Strip:Led_Strip_Connector L5
+U 1 1 5C55D848
+P 4350 4400
+F 0 "L5" H 4364 3855 50  0000 C CNN
+F 1 "Led_Strip_Connector" H 4364 3946 50  0000 C CNN
+F 2 "Connector_JST:JST_EH_B03B-EH-A_1x03_P2.50mm_Vertical" H 4350 4400 50  0001 C CNN
+F 3 "" H 4350 4400 50  0001 C CNN
+	1    4350 4400
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4500 4050 4850 4050
+Wire Wire Line
+	4500 4250 4850 4250
+$Comp
+L power:VCC #PWR014
+U 1 1 5C55D852
+P 4850 4050
+F 0 "#PWR014" H 4850 3900 50  0001 C CNN
+F 1 "VCC" H 4867 4223 50  0000 C CNN
+F 2 "" H 4850 4050 50  0001 C CNN
+F 3 "" H 4850 4050 50  0001 C CNN
+	1    4850 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR015
+U 1 1 5C55D858
+P 4850 4250
+F 0 "#PWR015" H 4850 4000 50  0001 C CNN
+F 1 "GND" H 4855 4077 50  0000 C CNN
+F 2 "" H 4850 4250 50  0001 C CNN
+F 3 "" H 4850 4250 50  0001 C CNN
+	1    4850 4250
+	1    0    0    -1  
+$EndComp
+Text Label 4500 4150 0    50   ~ 0
+LED_SIGNAL_5
+$Comp
+L LED_Strip:Led_Strip_Connector L10
+U 1 1 5C55D85F
+P 5700 4400
+F 0 "L10" H 5714 3855 50  0000 C CNN
+F 1 "Led_Strip_Connector" H 5714 3946 50  0000 C CNN
+F 2 "Connector_JST:JST_EH_B03B-EH-A_1x03_P2.50mm_Vertical" H 5700 4400 50  0001 C CNN
+F 3 "" H 5700 4400 50  0001 C CNN
+	1    5700 4400
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5850 4050 6200 4050
+Wire Wire Line
+	5850 4250 6200 4250
+$Comp
+L power:VCC #PWR024
+U 1 1 5C55D869
+P 6200 4050
+F 0 "#PWR024" H 6200 3900 50  0001 C CNN
+F 1 "VCC" H 6217 4223 50  0000 C CNN
+F 2 "" H 6200 4050 50  0001 C CNN
+F 3 "" H 6200 4050 50  0001 C CNN
+	1    6200 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR025
+U 1 1 5C55D86F
+P 6200 4250
+F 0 "#PWR025" H 6200 4000 50  0001 C CNN
+F 1 "GND" H 6205 4077 50  0000 C CNN
+F 2 "" H 6200 4250 50  0001 C CNN
+F 3 "" H 6200 4250 50  0001 C CNN
+	1    6200 4250
+	1    0    0    -1  
+$EndComp
+Text Label 5850 4150 0    50   ~ 0
+LED_SIGNAL_10
+Wire Notes Line
+	3750 4550 3750 450 
+Wire Notes Line
+	6550 450  6550 4550
+Text Notes 4750 600  0    50   ~ 0
+LED STRIP Connectors
+$Comp
+L Connector:Barrel_Jack J1
+U 1 1 5C560B50
+P 800 5450
+F 0 "J1" H 855 5775 50  0000 C CNN
+F 1 "Barrel_Jack" H 855 5684 50  0000 C CNN
+F 2 "Connector_BarrelJack:BarrelJack_CUI_PJ-063AH_Horizontal" H 850 5410 50  0001 C CNN
+F 3 "~" H 850 5410 50  0001 C CNN
+	1    800  5450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2800 3150 2800 3850
+NoConn ~ 2700 3750
+Wire Notes Line
+	450  4550 3100 4550
+Wire Wire Line
+	550  2050 1150 2050
+$Comp
+L MCU_Module:Arduino_Nano_v3.x A1
+U 1 1 5C544630
+P 1650 2050
+F 0 "A1" H 1650 964 50  0000 C CNN
+F 1 "Arduino_Nano_v3.x" H 1650 700 50  0000 C CNN
+F 2 "Module:Arduino_Nano" H 1800 1100 50  0001 L CNN
+F 3 "http://www.mouser.com/pdfdocs/Gravitech_Arduino_Nano3_0.pdf" H 1650 1050 50  0001 C CNN
+	1    1650 2050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	550  2550 1150 2550
+Wire Wire Line
+	1150 2450 550  2450
+Wire Wire Line
+	1150 2350 550  2350
+Wire Wire Line
+	1150 2250 550  2250
+Wire Wire Line
+	1150 2150 550  2150
+Wire Wire Line
+	1150 1950 550  1950
+Wire Wire Line
+	1150 1850 550  1850
+Text Label 550  2550 0    50   ~ 0
+LED_SIGNAL_1
+Text Label 550  2450 0    50   ~ 0
+LED_SIGNAL_2
+Text Label 550  2350 0    50   ~ 0
+LED_SIGNAL_3
+Text Label 550  2250 0    50   ~ 0
+LED_SIGNAL_4
+Text Label 550  2150 0    50   ~ 0
+LED_SIGNAL_5
+Text Label 550  2050 0    50   ~ 0
+LED_SIGNAL_6
+Text Label 550  1950 0    50   ~ 0
+LED_SIGNAL_7
+Text Label 550  1850 0    50   ~ 0
+LED_SIGNAL_8
+Text Label 550  1750 0    50   ~ 0
+LED_SIGNAL_9
+Text Label 550  1650 0    50   ~ 0
+LED_SIGNAL_10
+Wire Wire Line
+	550  1750 1150 1750
+Wire Wire Line
+	1150 1650 550  1650
+Wire Wire Line
+	4500 950  5050 950 
+Wire Wire Line
+	4500 1750 5050 1750
+Wire Wire Line
+	4500 2550 5050 2550
+Wire Wire Line
+	4500 3350 5050 3350
+Wire Wire Line
+	4500 4150 5050 4150
+Wire Wire Line
+	5850 4150 6400 4150
+Wire Wire Line
+	5850 3350 6400 3350
+Wire Wire Line
+	5850 2550 6400 2550
+Wire Wire Line
+	5850 1750 6400 1750
+Wire Wire Line
+	5850 950  6400 950 
+Wire Notes Line
+	3750 4550 6550 4550
+Wire Notes Line
+	450  4850 2000 4850
+Wire Notes Line
+	2000 6050 450  6050
+Text Notes 600  4950 0    50   ~ 0
+Power
+Wire Wire Line
+	1100 5350 1450 5350
+Wire Wire Line
+	1450 5350 1450 5200
+$Comp
+L power:VCC #PWR01
+U 1 1 5C5A9786
+P 1450 5150
+F 0 "#PWR01" H 1450 5000 50  0001 C CNN
+F 1 "VCC" H 1467 5323 50  0000 C CNN
+F 2 "" H 1450 5150 50  0001 C CNN
+F 3 "" H 1450 5150 50  0001 C CNN
+	1    1450 5150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG01
+U 1 1 5C5A97D1
+P 1450 5200
+F 0 "#FLG01" H 1450 5275 50  0001 C CNN
+F 1 "PWR_FLAG" V 1450 5328 50  0000 L CNN
+F 2 "" H 1450 5200 50  0001 C CNN
+F 3 "~" H 1450 5200 50  0001 C CNN
+	1    1450 5200
+	0    1    1    0   
+$EndComp
+Connection ~ 1450 5200
+Wire Wire Line
+	1450 5200 1450 5150
+$Comp
+L power:PWR_FLAG #FLG02
+U 1 1 5C5A9828
+P 1450 5800
+F 0 "#FLG02" H 1450 5875 50  0001 C CNN
+F 1 "PWR_FLAG" V 1450 5928 50  0000 L CNN
+F 2 "" H 1450 5800 50  0001 C CNN
+F 3 "~" H 1450 5800 50  0001 C CNN
+	1    1450 5800
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR02
+U 1 1 5C5A9884
+P 1450 5800
+F 0 "#PWR02" H 1450 5550 50  0001 C CNN
+F 1 "GND" H 1455 5627 50  0000 C CNN
+F 2 "" H 1450 5800 50  0001 C CNN
+F 3 "" H 1450 5800 50  0001 C CNN
+	1    1450 5800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP C1
+U 1 1 5C5A9E91
+P 1450 5500
+F 0 "C1" H 1568 5546 50  0000 L CNN
+F 1 "CP" H 1568 5455 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm" H 1488 5350 50  0001 C CNN
+F 3 "~" H 1450 5500 50  0001 C CNN
+	1    1450 5500
+	1    0    0    -1  
+$EndComp
+Connection ~ 1450 5350
+Wire Wire Line
+	1100 5550 1100 5650
+Wire Wire Line
+	1100 5650 1450 5650
+Wire Wire Line
+	1450 5650 1450 5800
+Connection ~ 1450 5650
+Connection ~ 1450 5800
+Wire Notes Line
+	2000 4850 2000 6050
+$EndSCHEMATC
